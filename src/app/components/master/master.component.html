@@ -1,0 +1,23 @@
+
+<div class="row">
+    <div class="col-12 text-center"> 
+        <div class="btn-group">
+            <button type="button" (click)="checkedComp('Roles')" [ngClass]="clickedComp=='Roles'?'btn-success':'btn-primary'" class="btn">Roles</button>
+            <button type="button" (click)="checkedComp('Desig')" [ngClass]="clickedComp=='Desig'?'btn-success':'btn-primary'" class="btn">Designation</button>
+            
+          </div>
+    
+    </div>
+</div>
+
+<div class="col-12"> 
+<div *ngIf="clickedComp=='Roles'">
+    <app-roles></app-roles>
+</div>
+<div *ngIf="clickedComp=='Desig'">
+    <app-designation></app-designation>
+</div>
+</div>
+
+
+

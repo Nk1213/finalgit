@@ -1,0 +1,86 @@
+<!-- <p>roles works!</p>
+
+<div class="row">
+<div class="col-3">
+  <p>  {{firstName}} </p>
+</div>
+<div class="col-3">
+    {{selectedState}}
+</div>
+
+<div class="col-3">
+   <p> {{version}} </p>
+</div>
+<div class="col-3">
+    <input type="text" [value]="firstName" class="form-control" >
+    
+</div>
+<div class="col-3">
+    
+    <input type="text" [(ngModel)]="firstName">
+</div>
+
+<div class="col-3">
+  <p>  {{currentDate}} </p>
+</div>
+
+<div class="col-3">
+    <input [type]="inputType">
+    <input type="checkbox">
+</div>
+<div class="col-3" >
+    <select [(ngModel)]="selectedState">
+        <option value="MH">MH</option>
+        <option value="RJ">RJ</option>
+        <option value="Goa">Goa</option>
+    </select>
+</div>
+<div class="col-3">
+<button class="btn btn-success" (click)="showsomeMessage()"> Show message </button>
+<button class="btn btn-success" (click)="showMessage('hi how r u')"> Show message </button>
+</div>
+
+</div>
+  -->
+<!-- <div class="row">
+
+  <div class="col-5">   
+    <ul>
+        <li *ngFor="let item of roleList">
+
+            {{item.role}}
+        </li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <select>
+<option *ngFor="let role of roleList" [value]="role.roleId" >
+{{role.role}}
+</option>
+
+    </select>
+  </div>
+  <div class="col-4">
+<button class="btn btn-warning mx-2" *ngFor="let item of roleList">
+{{item.role}}
+</button>
+  </div>
+</div> -->
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Role Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let role of roleList ; let srNo=index">
+                    <td>{{srNo+1}}</td>
+                 <td>{{role.role}}</td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
